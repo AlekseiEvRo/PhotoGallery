@@ -29,7 +29,7 @@ class PhotoGalleryFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         val flickrLiveData: LiveData<String> =
-            FlickrFetchr().fetchContents()
+            FlickrFetchr().fetchPhotos()
         flickrLiveData.observe(
             this,
             Observer { responseString ->
